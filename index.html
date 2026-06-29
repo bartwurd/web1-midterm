@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/styles.css" rel="stylesheet">
+    <title>All Sorts of Stuff About Space!</title>
+</head>
+<body>
+    <!-- the div class container tags allows the css document to grab everything within the div 
+     container tag at once -->
+    <div class="container">
+        <header>
+            <h1>
+                SPACE STUFF!
+            </h1>
+        </header>
+
+        <nav>
+        <!-- nav sections are for links. links are usually stored in lists-->
+        <!-- ul tag denotes an unordered list. li tagged items are information on that list.-->
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="spacepeople.html">Space People</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <article>
+            <!-- articles should always contain a heading tag of some kind-->
+            <div class="content-box"
+            <h2>
+                Black Holes
+            </h2>
+            <!-- img tag lets you go into an internal folder and place an image file from it onto your site.
+            the wrap-image class is so I can grab it with the float tag in the css document-->
+            <img src="images/black-hole.jpg" alt="black-hole" class="wrap-image">
+            <p>
+                <!-- this is Carl Sagan lorem ipsum -->
+                As a patch of light extraordinary claims require extraordinary evidence a billion 
+                trillion Drake Equation a still more glorious dawn awaits quasar. Descended from 
+                astronomers realm of the galaxies gathered by gravity at the edge of forever globular
+                star cluster the only home we've ever known. The carbon in our apple pies from which
+                we spring tingling of the spine from which we spring Sea of Tranquility invent the 
+                universe and billions upon billions upon billions upon billions upon billions 
+                upon billions upon billions. Muse about laws of physics astonishment preserve and 
+                cherish that pale blue dot Euclid a still more glorious dawn awaits. Take root and 
+                flourish star stuff harvesting star light finite but unbounded vastness is bearable 
+                only through love rings of Uranus dream of the mind's eye. With pretty stories for 
+                which there's little good evidence permanence of the stars the only home we've ever 
+                known the sky calls to us great turbulent clouds star stuff harvesting star light? 
+                Decipherment how far away a very small stage in a vast cosmic arena two ghostly white 
+                figures in coveralls and helmets are softly dancing are creatures of the cosmos Apollonius
+                of Perga? Star stuff harvesting star light with pretty stories for which there's little 
+                good evidence venture tendrils of gossamer clouds with pretty stories for which there's 
+                little good evidence white dwarf. Hearts of the stars citizens of distant epochs something 
+                incredible is waiting to be known descended from astronomers dream of the mind's eye hearts
+                    of the stars.
+            </p>
+            <h3>
+                Facts About Space
+            </h3>
+            <!-- div class factslist allows me to affect my list items in css -->
+            <div class="factslist">
+            <ul>
+                <li>Space is cool</li>
+                <li>Space is terrifying</li>
+                <li>Lots of great fiction takes place in space</li>
+            </ul>
+            </div>
+            
+            
+            <article>
+                <!-- articles should always contain a heading tag of some kind-->
+
+                <h3>Contact to learn more</h3>
+
+                <!-- html forms let users enter information into your site-->
+
+                <!-- forms require two attributes to tell them how to submit: action tells the form where 
+                to go (what page) 
+                and method tells the form how to send the information 
+                the post method sends the information in an encrypted package and 
+                the get method sends the information unencrypted in the browser --> 
+
+                <!-- div class info form allows me to grab the whole form in css -->
+
+                <div class="infoform">
+                <form action="contact.html" method="get">
+                    <section>
+                        <!-- a nested div with child classes-->
+                        <div class="fillouts">
+                        <!-- to link the label with the input, use 'for' on the lable matching the 'id' 
+                         on the input -->
+                         <label for="Name:">Your Name:</label>
+                        <input type="Name:" id="text" name="name">
+
+                        <!-- with input, you can specify different types -->
+                        <label for="email">Your Email:</label>
+                        <input type="email" id="email" name="email">
+
+                        <label for="userMessage">Your Message:</label>
+
+                        <textarea 
+                            id="userMessage" 
+                            name="message" 
+                            rows="5" 
+                            cols="40" 
+                            placeholder="Type your message here...">
+                        </textarea>
+                        </div>
+                        
+                    </section>
+                    
+                    <section>
+
+                            <h4>
+                                How much do you want to go to space?
+                            </h4>
+                        <!-- radio buttons operate as a set - check one, and the others uncheck -->
+                        <label for="alittle">A Little</label>
+                        <input type="radio" name="spacebutton" id="alittle" value="A Little">
+
+                        <label for="alot">A Lot</label>
+                        <input type="radio" name="spacebutton" id="alot" value="A Lot">
+
+                        <label for="morethananything">More Than Anything</label>
+                        <input type="radio" name="spacebutton" id="morethananything" value=""More Than Anything">
+                    </section>
+                    <section>
+                        <!-- to submit a form, add a submit button. This button will submit everything contained inside of one form tag -->
+                        <input type="submit" value="Send" name="submit">
+                    </section>
+                
+                </form>
+                </div>
+                
+            </article>
+            
+            
+        </article>
+    </div>
+</body>
+</html>

@@ -1,0 +1,211 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/********************************************
+            MAIN STYLE
+*********************************************/
+
+/* this sets a default font size for everything on the site, 
+which makes styling relative to font size easy */
+html{
+    font: size 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* target the element with the class "container" */
+.container{
+width: 80%;
+/* if you style things relative to the browser window, add a maximum, 
+so things won't stretch forever. */
+max-width:1200px;
+background-color: aquamarine;
+/* center the site in the browser window */
+margin:0 auto;
+
+/* styling something as a percentage of height doesn't work */
+/* if you want to style something relative to the height of the browser,
+you can use vh, or viewport height */
+
+/* you can also use vw, or viewport width - but this doesn't account for the
+scroll bar and will place some of your information behind it */
+}
+
+/* the CSS reset makes everything have no style so we have to put some back */
+h1{
+    font-size:3.6em;
+    /* an em unit is relative to the size of the font - since out baseline
+    is 10 px, 3.6 em =3.6x10 = 36px 
+    (if the baseline font was 16px, then 3.6em = 3.6x16 = 57.6 px) */
+    
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    /*we can then set the space - relative to the font size of this element...
+    0.5em= 36px x 0.5 = 18px */
+    margin-bottom: 0.5em;
+    color: aliceblue;
+}
+
+h3{
+    /* if you want to make sure an em is pointing to your baseline font size,
+    you can use rem, which stands for "root em" - and will always be relative
+     to the font size in your html tag */
+     font-size:2rem;
+
+     /* use font-weight to make text bold */
+     font-weight: bolder;
+     margin: 0.5em;
+}
+
+/* set a sefault font size for all of our paragraphs,
+relative to the 10px baseline set in our html */
+p{
+    font-size:1 rem;
+    line-height:1.4;
+    /* use a line-height to control how much space each line of text uses */
+
+    /* it also helps to add an additional space between each paragraph tag */
+    margin: 0.7em;
+}
+
+em{
+    /* font style is used to make something italic */
+    font-style: italic;
+}
+
+body{
+    background-color: rgb(86, 174, 241);
+}
+
+.wrap-image{
+    float:left;
+    width: 300px;
+    margin: 0.7em;
+}
+
+
+
+/***********************************************************
+HEADER STYLE
+************************************************************/
+
+header{
+    /* margin controls how much room an object has around it */
+    margin-left: auto;
+    margin-right: auto;
+    /* height and width control height and width */
+    height:150px;
+    width:900px;
+    background-color:bisque;
+    /* text-align center centers the text horizontally */
+    text-align: center;
+    /* padding controls how far something is from the edge of its container */
+    padding-top: 170px;
+
+    /* for decorative images, like a hero banner, you can add the image with css */
+    background-image:url(../images/galaxy.jpg);
+    /* the ../ tells the browser to go out of the css folder and into the images folde rto find the image */
+
+    /* you can control how the image repeats */
+    background-repeat:no-repeat;
+
+    /* you can control how the image is scaled inside the element */
+    /* background-size:contain; will scale the image until the whole 
+    thing is visible inside the element */
+
+    background-size:cover;
+    /* cover scales the image so the whole element is covered by the image */
+
+    /* you can control how an image is positione in the element... */
+    background-position: top center;
+    /* this takes two values: horizontal and vertical position */
+
+    /* with the shorthand background: property, you can enter
+    color image repeat size position all in the same property */
+}
+
+/***************************************************************************************
+FORM STYLE
+*****************************************************************************************/
+/* by using fillouts label I am able to select the labels within the fillouts class */
+
+.infoform {
+    border: 2px solid black;
+    padding: 0.7em;
+    margin: 0.7em;
+}
+
+.fillouts label{
+    /* display block forces affected elements onto their own line */
+    display: block;
+    margin-bottom: 0.2em;
+    margin-top: 0.7em;
+}
+
+.fillouts {
+    /* a flexbox allows an element to fill a container */
+    display: flex;
+    flex-direction: column;
+    width:100%;
+}
+
+/*************************************************************************************************************
+FACTS STYLES
+****************************************************************************************************************/
+
+.factslist {
+    margin: 0.7em;
+}
+
+.factslist ul{
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+
