@@ -66,7 +66,7 @@ width: 80%;
 /* if you style things relative to the browser window, add a maximum, 
 so things won't stretch forever. */
 max-width:900px;
-height: 1375px;
+height: 1475px;
 background-color: aquamarine;
 /* center the site in the browser window */
 margin:0 auto;
@@ -77,6 +77,18 @@ you can use vh, or viewport height */
 
 /* you can also use vw, or viewport width - but this doesn't account for the
 scroll bar and will place some of your information behind it */
+}
+
+.bowie{
+    margin-top: 100px;
+}
+
+/* this styles the footer */
+footer{
+    text-align: right;
+    text-align: bottom;
+    font-size: 0.8em;
+    margin: 20px;
 }
 
 /* the CSS reset makes everything have no style so we have to put some back */
@@ -205,8 +217,9 @@ NAV STYLE
 }
 
 .navbar a {
+    /* text decoration none removes the line from underneath link text */
   text-decoration: none;
-  color: #333;
+  color: #000000;
 }
 
 .navbutton {
