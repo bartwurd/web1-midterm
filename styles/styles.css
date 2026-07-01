@@ -65,7 +65,8 @@ html{
 width: 80%;
 /* if you style things relative to the browser window, add a maximum, 
 so things won't stretch forever. */
-max-width:1200px;
+max-width:900px;
+height: 1375px;
 background-color: aquamarine;
 /* center the site in the browser window */
 margin:0 auto;
@@ -92,6 +93,16 @@ h1{
     color: aliceblue;
 }
 
+h2{/* if you want to make sure an em is pointing to your baseline font size,
+    you can use rem, which stands for "root em" - and will always be relative
+     to the font size in your html tag */
+     font-size:2.5rem;
+
+     /* use font-weight to make text bold */
+     font-weight: bolder;
+     margin: 0.5em;
+}
+
 h3{
     /* if you want to make sure an em is pointing to your baseline font size,
     you can use rem, which stands for "root em" - and will always be relative
@@ -101,6 +112,16 @@ h3{
      /* use font-weight to make text bold */
      font-weight: bolder;
      margin: 0.5em;
+}
+
+h4{
+    /* if you want to make sure an em is pointing to your baseline font size,
+    you can use rem, which stands for "root em" - and will always be relative
+     to the font size in your html tag */
+     font-size:1.3rem;
+
+     /* use font-weight to make text bold */
+     
 }
 
 /* set a sefault font size for all of our paragraphs,
@@ -120,7 +141,7 @@ em{
 }
 
 body{
-    background-color: rgb(86, 174, 241);
+    background-color: rgb(9, 25, 37);
 }
 
 .wrap-image{
@@ -170,6 +191,74 @@ header{
     color image repeat size position all in the same property */
 }
 
+
+/****************************************************************************************
+NAV STYLE
+********************************************************************************************/
+
+/* Base navigation styling to line items up horizontally */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+}
+
+.navbutton {
+  display: inline-flex;     /* Allows adding padding and margin properly */
+  justify-content: center; /* places text in the center of each button
+  background-color: aquamarine; /* Button color */
+  padding: 10px 0px;        /* Vertically and horizontally spaces the button */
+  transition: background 0.3s ease; /* Smooth hover transition effect */
+  width: 300px;
+  margin-bottom: 30px
+ 
+}
+
+.ctrnavbutton {
+    /* border left and right add the vertical line sseparating the buttons */
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+  display: inline-flex;     /* Allows adding padding and margin properly */
+  justify-content: center; /* places text in the center of each button
+  background-color: aquamarine; /* Button color */
+  padding: 10px 0px;        /* Vertically and horizontally spaces the button */
+  transition: 0.3s; /* Smooth hover transition effect */
+  width: 300px;
+  margin-bottom: 30px
+  }
+
+  .navbutton:hover {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+/*sendbutton active controls the look of the button when it is being pressed */
+.navbutton:active {
+  background-color: #b90202;
+  color: #ffffff;
+}
+
+.ctrnavbutton:hover {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+/*sendbutton active controls the look of the button when it is being pressed */
+.ctrnavbutton:active {
+  background-color: #b90202;
+  color: #ffffff;
+}
+
+
+
+
+
 /***************************************************************************************
 FORM STYLE
 *****************************************************************************************/
@@ -178,7 +267,7 @@ FORM STYLE
 .infoform {
     border: 2px solid black;
     padding: 0.7em;
-    margin: 0.7em;
+    margin: 0.7em 0.7em 0.7em 0.7em;
 }
 
 .fillouts label{
@@ -194,6 +283,35 @@ FORM STYLE
     flex-direction: column;
     width:100%;
 }
+/* .radioform h4 affects only the h4 heading in the radioform class */
+.radioform h4{
+    margin-top:0.7em;
+    margin-bottom:0.7em;
+}
+/* sendbutton class grabs the send button. border adds the black borderline,
+ background colour changes the colour, cursor pointer makes it so the cursos 
+ become sa pointing finger when hovering over the button, appearance none removes the default button appearance */
+.sendbutton{
+    border: 2px solid black;
+    background-color: aquamarine;
+    cursor: pointer;
+    appearance: none;
+    padding:10px;
+    margin-top:20px;
+    transition: 0.3s; /* Smooth hover transition effect */
+}
+
+/* sendbutton hover controls the look of the button when you hover your cursor over it */
+.sendbutton:hover {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+/*sendbutton active controls the look of the button when it is being pressed */
+.sendbutton:active {
+  background-color: #b90202;
+  color: #ffffff;
+}
 
 /*************************************************************************************************************
 FACTS STYLES
@@ -207,5 +325,7 @@ FACTS STYLES
     list-style-type: disc;
     padding-left: 20px;
 }
+
+
 
 
